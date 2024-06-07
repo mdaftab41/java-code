@@ -12,6 +12,7 @@ public class mystring {
       String name4 = name3.replace('A','z');
       System.out.println(name3);
       System.out.println(name4);
+      System.out.println(name2.substring(0,2));
 
   }
 }
