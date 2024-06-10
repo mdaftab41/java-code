@@ -23,12 +23,24 @@ class LL {
         head = newNode;
     }
 
+    void InserAtLast(int data){
+        Node newNode= new Node(data);
+        Node current = head;
+        while(current.next!=null){
+            current = current.next ; 
+        }
+        current.next=newNode;
+        newNode.next=null;
+
+    }
+
     void print() {
         Node current = head;
         while (current != null) {
-            System.out.print(current.data + "  ");
+            System.out.print(current.data + " --> ");
             current = current.next;
         }
+        System.out.print( "Null "); 
     }
 }
 
@@ -41,6 +53,10 @@ public class link {
         list.InserAtFirst(5);
         list.InserAtFirst(6);
         list.InserAtFirst(7);
+        list.InserAtLast(8);
+        list.InserAtLast(6);
+        list.InserAtLast(9);
+
         list.print();
     }
 }
