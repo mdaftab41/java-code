@@ -48,6 +48,18 @@ class LL {
         }
 
     }
+    // code to find Middle Element of linkList
+    int Middle() {
+        Node slow = head;
+        Node fast = head;
+    
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow.data;
+    }
+    
 
     void InserAtLast(int data){
         Node newNode= new Node(data);
@@ -86,6 +98,8 @@ public class link {
         list.InsertAtPos(19,1);
         list.InsertAtPos(50,5);
         list.InsertAtPos(99,20);
+        System.out.println( " Value of middle node is :" +"  " + list.Middle()) ;
+     
 
         list.print();
     }
