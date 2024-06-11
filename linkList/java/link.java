@@ -60,6 +60,24 @@ class LL {
         return slow.data;
     }
     
+    // FInd cycle in link list 
+    void DetectCycle() {
+        Node slow = head;
+        Node fast = head;
+    
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if(slow == fast){
+                System.out.println(" Cycle Detect in Link list");
+                return ;
+            }
+
+        }
+        System.out.println(" Cycle Not Detect in Link list");
+         
+    }
+    
 
     void InserAtLast(int data){
         Node newNode= new Node(data);
@@ -98,7 +116,8 @@ public class link {
         list.InsertAtPos(19,1);
         list.InsertAtPos(50,5);
         list.InsertAtPos(99,20);
-        System.out.println( " Value of middle node is :" +"  " + list.Middle()) ;
+        System.out.println( " Value of middle node is :" +"  " + list.Middle()) ; // calling for middle node 
+       list.DetectCycle();
      
 
         list.print();
