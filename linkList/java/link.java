@@ -132,6 +132,7 @@ public class link {
         list.InsertAtPos(19,1);
         list.InsertAtPos(50,5);
         list.InsertAtPos(99,20);
+        System.out.println(" link list is : ");
         list.print();
         System.out.println( "  ");
         System.out.println( " Value of middle node is :" +"  " + list.Middle()) ; // calling for middle node 
