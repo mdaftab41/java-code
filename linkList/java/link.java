@@ -138,7 +138,7 @@ public class link {
         System.out.println( " Value of middle node is :" +"  " + list.Middle()) ; // calling for middle node 
        list.DetectCycle();
        list.reverse();
-       System.out.println(" Reverse link list");
+       System.out.println(" Reverse link list is :");
 
         list.print();
     }
