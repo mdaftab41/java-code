@@ -23,6 +23,32 @@ class LL {
         head = newNode;
     }
 
+    void InsertAtPos(int data , int pos){
+        Node node = new Node(data);// creating new node 
+        Node current = head;
+        pos=pos-1;
+        while (current.next!=null && pos >1) {
+            current = current.next;
+             pos-- ;  
+        }
+
+        if (current == null || current.next == null) {
+            System.out.println("Position is outside the linked list.");
+            return;
+        }
+        
+        if(pos == 1 ){
+         node.next= current.next;
+        current.next= node; 
+        }
+         
+        if(pos==0){
+            node.next= head;
+            head= node ;
+        }
+
+    }
+
     void InserAtLast(int data){
         Node newNode= new Node(data);
         Node current = head;
@@ -56,6 +82,10 @@ public class link {
         list.InserAtLast(8);
         list.InserAtLast(6);
         list.InserAtLast(9);
+        list.InsertAtPos(31,0);
+        list.InsertAtPos(19,1);
+        list.InsertAtPos(50,5);
+        list.InsertAtPos(99,20);
 
         list.print();
     }
