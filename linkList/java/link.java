@@ -77,6 +77,22 @@ class LL {
         System.out.println(" Cycle Not Detect in Link list");
          
     }
+
+    // reverse the  linkList 
+    Node reverse()
+    {
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
+        return head;
+    }
     
 
     void InserAtLast(int data){
@@ -116,9 +132,12 @@ public class link {
         list.InsertAtPos(19,1);
         list.InsertAtPos(50,5);
         list.InsertAtPos(99,20);
+        list.print();
+        System.out.println( "  ");
         System.out.println( " Value of middle node is :" +"  " + list.Middle()) ; // calling for middle node 
        list.DetectCycle();
-     
+       list.reverse();
+       System.out.println(" Reverse link list");
 
         list.print();
     }
