@@ -11,5 +11,15 @@ class Main {
       System.out.println("Third Element: " + age[2]);
       System.out.println("Fourth Element: " + age[3]);
       System.out.println("Fifth Element: " + age[4]);
+      System.out.println("Array using loop");
+
+      int[] age1 = {12, 4, 5};
+
+   // loop through the array
+   // using for loop
+   System.out.println("Using for Loop:");
+   for(int i = 0; i < age1.length; i++) {
+     System.out.println(age1[i]);
+   }
     }
    }
