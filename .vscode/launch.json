@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "variable",
+      "request": "launch",
+      "mainClass": "RevisionJava.variable",
+      "projectName": "java code_fc202b97"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "RevisionJava.Main",
